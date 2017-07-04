@@ -110,6 +110,6 @@ if (isset($_SERVER['HTTP_USER_AGENT']) && (strpos($_SERVER['HTTP_USER_AGENT'], '
 				endif;
 				?>
 
-				<?php if ( is_singular( 'post' ) || is_archive() || is_home() ): ?>
+				<?php if ( is_singular( 'post' ) || is_archive() || is_home() || is_search() ): ?>
 					<div class="main-content-inner <?php echo _rhd_main_content_bootstrap_classes(); ?>">
 				<?php endif; ?>
