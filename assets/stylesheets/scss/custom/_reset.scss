@@ -1,0 +1,195 @@
+//-------------------------------------//
+//--------------  RESET  --------------//
+//-------------------------------------//
+
+
+//------------------
+//-- GLOBAL
+//------------------
+*{ outline: none; }
+
+html{
+   width: 100%;
+   font-size: 14px;
+}
+
+img {
+  height: auto; /* Make sure images are scaled correctly. */
+  max-width: 100%; /* Adhere to container width. */
+}
+
+
+
+
+//---------------------
+//-- CLEARING FLOAT
+//---------------------
+.clear:before,
+.clear:after,
+.gallery:before,
+.gallery:after,
+.entry-content:before,
+.entry-content:after,
+.comment-content:before,
+.comment-content:after,
+.site-header:before,
+.site-header:after,
+.site-content:before,
+.site-content:after,
+.site-footer:before,
+.site-footer:after,
+.home-widget-area:before {
+  content: '';
+  display: table;
+}
+
+.clear:after,
+.entry-content:after,
+.gallery:after,
+.comment-content:after,
+.site-header:after,
+.site-content:after,
+.site-footer:after,
+.home-widget-area:before {
+  clear: both;
+}
+
+
+
+//------------------------
+//-- FONTS
+//------------------------
+pre {
+  width: 100%; /* specify width */
+  white-space: pre-wrap; /* CSS3 browsers */
+  white-space: -moz-pre-wrap !important; /* 1999+ Mozilla */
+  white-space: -pre-wrap; /* Opera 4 thru 6 */
+  white-space: -o-pre-wrap; /* Opera 7 and up */
+  word-wrap: break-word; /* IE 5.5+ and up */
+}
+
+h1{
+  font-family: $font-family-title-medium;
+  font-size: 2.25rem;
+  color: $gray-dark;
+  text-transform: capitalize;
+}
+
+h2{
+  font-family: $font-family-title-medium;
+  font-size: 1.8rem;
+  color: #242424;
+}
+
+h3{
+  font-family: $font-family-title-medium;
+  font-size: 1.3rem;
+  color: $gray-base;
+}
+
+h4{
+  font-family: $font-family-date;
+  font-size: .9rem;
+  color: $gray-light;
+}
+
+p{
+  font-family: $font-family-content;
+  font-size: .95rem;
+  color: $gray-light;
+  line-height: 1.5;
+}
+
+a{
+  font-family: $font-family-content;
+}
+
+a.inverse{
+  font-family: $font-family-content;
+  color: $gray-dark;
+  transition: all 0.3s;
+  font-size: 2.25rem;
+
+  &:hover{
+    color: $brand-primary;
+  }
+}
+
+
+.widget-area a{
+  font-family: $font-family-title-medium;
+  font-size: 1rem;
+  color: $gray-light;
+}
+
+
+
+
+//------------------------
+//-- FORM
+//------------------------
+input[type="email"],
+input[type="text"],
+textarea{
+  font-family: $font-family-title-medium !important;
+  font-size: .9rem !important;
+  padding: .75rem 1rem !important;
+  color: $gray-lighter !important;
+  width: 100%;
+}
+
+
+
+
+//------------------------
+//-- BUTTON
+//------------------------
+.btn-primary{
+  font-family: $font-family-CTA;
+  font-size: .9rem;
+  padding: .75rem 1rem;
+}
+
+.btn-default{
+  font-family: $font-family-CTA;
+  font-size: .9rem;
+  padding: .75rem 1rem;
+}
+
+
+
+
+
+
+
+
+
+
+//------------------------
+//-- RESPONSIVE
+//------------------------
+@media(min-width:$screen-sm) {
+  html{ font-size: 16px; }
+  h2{ font-size: 1.6rem; }
+  h3{ font-size: 1rem; }
+  h4{ font-size: .75rem; }
+  p{ font-size: .9rem; }
+  a.inverse{ font-size: 2.25rem; }
+  .widget-area h3{ font-size: 1.3rem; }
+  .widget-area a{ font-size: .9rem; }
+}
+
+
+@media(min-width:$screen-md) {
+  html{ font-size: 18px; }
+  h2{ font-size: 1.8rem; }
+  h4{ font-size: .8rem; }
+  p{ font-size: .8rem; }
+  .widget-area h3{ font-size: 1rem; }
+  .widget-area a{ font-size: .8rem; }
+}
+
+
+@media(min-width:$screen-lg) {
+  html{ font-size: 20px; }
+}
