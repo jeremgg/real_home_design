@@ -1,0 +1,173 @@
+//--------------------------------------------//
+//--------------  TESTIMONIALS  --------------//
+//--------------------------------------------//
+
+
+.page-template-tmp-temoignages{
+
+  .main-content-area > .row .main-content-inner{
+    margin-top: 1.25rem;
+    float: none;
+  }
+
+
+  //---------------
+  //--SECTION
+  //---------------
+  #primary .site-main section{
+    padding: 0;
+    padding-bottom: 5rem;
+  }
+
+
+
+  //-------------------------
+  //--SECTIONS TESTIMONIALS
+  //-------------------------
+  #primary .site-main #testimonial .section-inner-content article{
+    .section-top{
+      position: relative;
+      display: flex;
+      align-items: flex-end;
+
+      .section-header{
+        display: inline-block;
+        width: auto;
+        float: none;
+        padding: 0;
+      }
+
+      .section-footer{
+        display: inline-block;
+        position: absolute;
+        right: 0;
+      }
+    }
+
+    .section-content{
+      margin-top: 3.25rem;
+
+      .testimonial-single{
+        background: #f6f6f6;
+        margin-bottom: 2rem;
+        padding: 1.5rem;
+
+        &:last-child{
+          margin-bottom: 0;
+        }
+
+        .author-thumbnail img{
+          border-radius: 4px;
+        }
+
+        .entry-content{
+          margin-left: 2rem;
+          width: calc(83.33333% - 2rem);
+
+          p{
+            margin-bottom: 1rem;
+            font-size: .9rem;
+
+            &:nth-child(2){
+              display: none;
+            }
+
+            &.author{
+              font-size: .95rem;
+              color: $gray-dark;
+              margin-bottom: 0;
+              text-transform: capitalize;
+
+              span{ font-family: $font-family-date; }
+            }
+          }
+
+          a{
+            font-size: .95rem;
+            text-decoration: underline;
+            display: block;
+            margin-top: .15rem;
+          }
+        }
+      }
+    }
+
+
+    //------------
+    //--SIDEBAR
+    //------------
+    #secondary{
+      margin-top: 3.25rem;
+    }
+  }
+
+
+
+}
+
+
+
+
+
+//------------------------
+//-- RESPONSIVE
+//------------------------
+@media(min-width:$screen-sm) {
+
+  .page-template-tmp-temoignages{
+
+    #primary .site-main #testimonial .section-inner-content article{
+      .section-content{
+        margin-top: 3.25rem;
+        padding-right: 2rem;
+        border-right: $border #f3f2f2;
+        width: 75%;
+
+        .testimonial-single{
+          .entry-content{
+            p{
+              margin-bottom: 1rem;
+              font-size: .8rem;
+
+              &.author{
+                font-size: .8rem;
+              }
+            }
+
+            a{
+              font-size: .8rem;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+
+
+@media(min-width:$screen-md) {
+
+  .page-template-tmp-temoignages{
+
+    #primary .site-main #testimonial .section-inner-content article{
+      .section-content{
+        .testimonial-single{
+          .entry-content{
+            p{
+              font-size: .7rem;
+
+              &.author{
+                font-size: .7rem;
+              }
+            }
+
+            a{
+              font-size: .7rem;
+            }
+          }
+        }
+      }
+    }
+  }
+}

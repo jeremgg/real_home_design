@@ -1,0 +1,87 @@
+//--------------------------------------//
+//--------------  SKILLS  --------------//
+//--------------------------------------//
+
+
+.page-template-tmp-about,
+.page-template-tmp-home{
+
+  //--------------------
+  //--SECTIONS SKILLS
+  //--------------------
+  #primary .site-main #skills .section-inner-content{
+    .skills-single{
+      margin: 0 1.5rem;
+      width: calc(100% - (1.5rem * 2));
+      max-width: 350px;
+      margin: 0 auto;
+      margin-bottom: 3rem;
+      float: none;
+
+      &:last-child{
+        margin-bottom: 0;
+      }
+
+      i{
+        display: block;
+        text-align: center;
+        font-size: 1.25rem;
+        color: $gray-dark;
+      }
+
+      .skills-title{
+        color: $gray-dark;
+        text-align: center;
+        margin-top: 1rem;
+        margin-bottom: .65rem;
+      }
+    }
+  }
+
+}
+
+
+
+
+
+
+
+.page-template-tmp-home{
+
+  //---------------
+  //--SECTIONS
+  //---------------
+  #primary .site-main section{
+    padding: 4.25rem 0;
+
+    &:nth-child(3){ background: #f3f3f3; }
+  }
+}
+
+
+
+
+
+
+//------------------------
+//-- RESPONSIVE
+//------------------------
+@media(min-width:$screen-sm) {
+  .page-template-tmp-about,
+  .page-template-tmp-home{
+
+    #primary .site-main #skills .section-inner-content{
+      .skills-single{
+        margin: 0 1.5rem;
+        width: calc(25% - (1.5rem * 2));
+        max-width: none;
+        float: left;
+      }
+
+      .section-content p{
+        font-size: .7rem;
+        text-align: center;
+      }
+    }
+  }
+}

@@ -1,0 +1,796 @@
+//------------------------------------//
+//--------------  HOME  --------------//
+//------------------------------------//
+
+
+.page-template-tmp-home{
+
+  .main-content-area > .row{
+    margin: 0;
+
+    .container{
+      padding: 0;
+      width: 100%;
+
+      .main-content-inner{
+        float: none;
+      }
+    }
+  }
+
+  //------------
+  //--SECTION
+  //------------
+
+  #primary .site-main section{
+    &#intro{ padding: 0; }
+    &#offer{ padding: 5rem 0; }
+
+    &#offer,
+    &#skills,
+    &#property,
+    &#team,
+    &#more-about,
+    &#testimonials,
+    &#partenairs,
+    &#team{
+      > .container{
+        // width: 1140px;
+        padding-right: floor(($grid-gutter-width-container / 2));
+        padding-left: floor(($grid-gutter-width-container / 2));
+      }
+    }
+  }
+
+  //------------------
+  //--SECTION INTRO
+  //------------------
+  #primary .site-main #intro .section-inner-content #carousel-intro{
+    margin: 0;
+
+    .carousel-indicators{
+      bottom: 32%;
+    }
+
+    .carousel-inner .item{
+      img{
+        max-width: 100%;
+        width: 100%;
+      }
+
+      .carousel-caption{
+        padding: 0;
+
+        .slide-title{
+          font-family: $font-family-CTA;
+          font-size: 2.4rem;
+          color: $white;
+          margin-bottom: .5rem;
+        }
+
+        .price{
+          font-family: $font-family-sans-serif;
+          font-size: 1.8rem;
+          color: $white;
+          display: inline-block;
+          margin-top: 10px;
+          margin-right: 1.5rem;
+          margin-bottom: 0;
+        }
+
+        .btn{
+          padding: .85rem .6rem;
+          background: rgba($white, .2);
+          color: $white;
+
+          &:hover{
+            background: rgba($white, .3);
+          }
+        }
+      }
+    }
+  }
+
+
+
+  //-------------------
+  //--SECTIONS OFFER
+  //-------------------
+  #primary .site-main #offer{
+    .section-inner-content{
+      .offer-title{
+        text-align: left;
+        margin-bottom: 1.5rem;
+
+        &:after{
+          content: '';
+          width: 1.5rem;
+          height: 3px;
+          background: #3c3c3c;
+          display: inline-block;
+          margin-top: 1.5rem;
+        }
+      }
+
+      .offer-content{
+        p{
+          font-size: 1rem;
+        }
+      }
+    }
+  }
+
+
+  //---------------------
+  //--SECTION PROPERTY
+  //---------------------
+  #primary .site-main #property{
+    background: #f6f6f6;
+
+    .section-inner-content .section-top .section-header{
+      .entry-title{
+        font-size: 45px;
+        color: #3c3c3c;
+        text-align: center;
+
+        &:after{
+          content: '';
+          background: $brand-primary;
+          height: 3px;
+          width: 110px;
+          display: block;
+          margin: 1.5rem auto;
+
+        }
+      }
+
+      p{
+        margin: 0 auto;
+        float: none;
+      }
+    }
+
+    .section-inner-content{
+      text-align: center;
+
+      .section-content{
+        margin-top: 3rem;
+
+        .gallery-box{
+          margin-bottom: 2rem;
+
+          .element{
+            background: $white;
+            border: $border-small $gray-lighting;
+            max-width: 450px;
+            margin: 0 auto;
+            margin-bottom: 1.25rem;
+            float: none;
+
+            &:nth-child(6){
+              margin-bottom: 0;
+            }
+
+            a.inverse{
+              font-family: $font-family-title-medium;
+              font-size: 1.3rem;
+              margin-top: 1.25rem;
+              margin-bottom: .35rem;
+              display: block;
+              text-align: center;
+            }
+
+            .element-place,
+            .element-price{
+              text-align: center;
+            }
+
+            .element-price{
+              font-family: $font-family-sans-serif;
+              color: $brand-primary;
+              margin-top: 1rem;
+              margin-bottom: 1.25rem;
+            }
+
+            .element-room{
+              border-top: $border-small $gray-lighting;
+              padding: .5rem 0;
+              text-align: center;
+
+              ul{
+                list-style: none;
+                padding: 0;
+                display: inline-block;
+                margin: 0 auto;
+
+                li{
+                  display: inline-block;
+
+                  &:nth-child(2){
+                    &:before,
+                    &:after{
+                      content: ".";
+                      margin: 0 .75rem;
+                      display: inline-block;
+                      line-height: 1;
+                    }
+                  }
+
+                  p{
+                    font-family: $font-family-sans-serif;
+                    font-size: .85rem;
+                    display: inline-block;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+
+      .btn-primary{
+        font-size: .8rem;
+        margin: 0 auto;
+      }
+    }
+  }
+
+
+
+  //------------------------
+  //--SECTIONS MORE ABOUT
+  //------------------------
+  #primary .site-main #more-about{
+    background: #f3f2f2;
+    padding: 2rem 0;
+
+    .section-inner-content{
+      display: flex;
+      align-items: center;
+
+      .section-title .entry-title{
+        font-family: $font-family-CTA;
+        color: #3c3c3c;
+        font-size: 1.6rem;
+      }
+
+      .section-btn{
+        a{
+          font-size: .8rem;
+        }
+      }
+    }
+  }
+
+  //-------------------------
+  //--SECTION TESTIMONIALS
+  //-------------------------
+  #primary .site-main #testimonials{
+    background: url(assets/images/testimonial-bg.jpg) no-repeat;
+    background-size: cover;
+
+    .section-inner-content .section-header .entry-title{
+      font-family: $font-family-title-medium;
+      font-size: 2.25rem;
+      color: #ddd;
+      text-align: center;
+      text-transform: capitalize;
+
+      &:after{
+        content: '';
+        background: $brand-primary;
+        height: 3px;
+        width: 110px;
+        display: block;
+        margin: 1.5rem auto;
+      }
+    }
+
+    .section-inner-content #carousel-testimonials{
+      height: 175px;
+      margin-bottom: 0;
+
+      .carousel-inner .item{
+        background: transparent;
+        height: 265px;
+
+        .carousel-caption{
+          bottom: auto;
+
+          p{
+            font-size: .9rem;
+            color: #fff;
+
+            &.testimonials-author{
+              margin-top: 1.25rem;
+              margin-bottom: 1.5rem;
+              font-size: .8rem;
+            }
+          }
+
+          a.read-more{ display: none; }
+        }
+      }
+    }
+  }
+
+  //-----------------------
+  //--SECTION PARTENAIRS
+  //-----------------------
+  #primary .site-main #partenairs{
+    padding: 3.75rem;
+
+    .section-inner-content{
+      .section-title{
+        margin-bottom: 2rem;
+
+        .entry-title{
+          font-size: 1.8rem;
+          color: $gray-dark;
+          text-align: center;
+        }
+      }
+    }
+
+    .section-inner-content .partenairs-list{
+      .partenairs-single{
+        margin-bottom: 2rem;
+
+        &:last-child{
+          margin-bottom: 0;
+
+        }
+
+        img{
+          margin: 0 auto;
+        }
+      }
+    }
+  }
+
+  //-----------------
+  //--SECTION TEAM
+  //-----------------
+  #primary .site-main #team{
+    .section-inner-content{
+      .section-header .entry-title{
+        text-align: center;
+        font-size: 2.25rem;
+        color: $gray-dark;
+
+        &:after{
+          content: '';
+          background: $brand-primary;
+          height: 3px;
+          width: 110px;
+          display: block;
+          margin: 1.5rem auto;
+        }
+      }
+    }
+
+    #carousel-team{
+      margin-bottom: 0;
+      height: 423px;
+
+      .container{
+        position: static;
+      }
+
+      .carousel-indicators{
+        top: 90px;
+        bottom: auto;
+        left: 50%;
+        transform: translateX(-50%);
+        margin-left: 0;
+
+        li{
+          border-color: $brand-primary;
+
+          &.active{
+            background: $brand-primary;
+            border-color: $brand-primary;
+          }
+        }
+      }
+
+      .carousel-inner .item{
+        background: transparent;
+
+        .thumbs{
+          float: none;
+
+          img{
+            margin: 0 auto;
+            display: block;
+            max-height: 400px;
+          }
+        }
+
+        .carousel-caption{
+          position: absolute;
+          right: 0;
+          left: 0;
+          bottom: 1rem;
+          text-shadow: none;
+          padding-bottom: 0;
+          height: 400px;
+          float: none;
+
+          .content-caption{
+            background: rgba(#000, .25);
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translateY(-50%) translateX(-50%);
+            text-align: center;
+            padding: 1rem;
+            max-width: 450px;
+            margin: 0 auto;
+            float: none;
+            width: 100%;
+
+            .section-header{
+              display: none;
+
+              .entry-title{
+                text-align: center;
+                font-size: 2.25rem;
+                color: $gray-dark;
+
+                &:after{
+                  content: '';
+                  background: $brand-primary;
+                  height: 3px;
+                  width: 110px;
+                  display: block;
+                  margin: 1.5rem 0;
+                }
+              }
+            }
+
+            .team-name{
+              font-size: 1.25rem;
+              color: $white;
+              margin-bottom: 1.5rem;
+              display: block;
+              text-align: center;
+            }
+
+            p{
+              margin-bottom: 1.5rem;
+              font-size: .8rem;
+              text-align: left;
+              color: $white;
+              text-shadow: 0 1px 2px rgba(0, 0, 0, 0.6);
+
+              &.phone{
+
+              }
+
+              &.fa-phone.phone{
+                color: $white;
+                margin-bottom: 0;
+                display: block;
+                text-align: center;
+                margin-bottom: .5rem;
+
+                &:before{
+                  margin-right: .75rem;
+                  font-size: .75rem;
+                }
+              }
+            }
+
+            a{
+              margin-bottom: 0;
+              font-size: .8rem;
+            }
+
+            .fa:before{
+              color: $white;
+              margin-right: .75rem;
+              font-size: .75rem;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+
+
+
+//----------------
+//--RESPONSIVE
+//----------------
+@media(min-width:$screen-sm) {
+  .page-template-tmp-home{
+
+    #primary .site-main section{
+      &#offer,
+      &#skills,
+      &#property,
+      &#team,
+      &#more-about,
+      &#testimonials,
+      &#partenairs{
+        > .container{
+          width: 720px;
+        }
+      }
+    }
+
+    #primary .site-main #offer{
+      .section-inner-content{
+        .offer-title{
+          text-align: right;
+          margin-bottom: 0;
+
+          &:after{
+            float: right;
+          }
+        }
+
+        .offer-content{
+          width: calc(66.66667% - 2rem);
+          margin-left: 2rem;
+
+          p{
+            font-size: .8rem;
+          }
+        }
+      }
+    }
+
+
+
+    #primary .site-main #property{
+      .section-inner-content{
+        text-align: center;
+
+        .section-content{
+          .gallery-box{
+            .element{
+              width: calc(33.33333% - (2.5rem / 3));
+              margin: 0;
+              margin-bottom: 1.25rem;
+              float: left;
+
+              &:nth-child(3n+2){
+                margin-right: 1.25rem;
+                margin-left: 1.25rem;
+              }
+
+              &:nth-child(4),
+              &:nth-child(5),
+              &:nth-child(6){
+                margin-bottom: 0;
+              }
+
+              a.inverse{ font-size: 1.1rem; }
+              .element-room ul li p{ font-size: .65rem; }
+            }
+          }
+        }
+      }
+    }
+
+
+    #primary .site-main #testimonials{
+      .section-inner-content #carousel-testimonials{
+        height: 175px;
+
+        .carousel-indicators{
+          bottom: 0px;
+        }
+      }
+    }
+
+
+    #primary .site-main #partenairs{
+      padding: 3.75rem;
+
+      .container{ margin: 0 auto; }
+
+      .section-inner-content{
+        position: relative;
+        display: flex;
+        align-items: center;
+
+        .section-title{
+          width: 21%;
+          margin-bottom: 0;
+
+          .entry-title{
+            font-size: 1.4rem;
+            text-align: left;
+          }
+        }
+      }
+
+      .section-inner-content .partenairs-list{
+        margin-left: 1rem;
+        position: relative;
+        display: flex;
+        align-items: center;
+
+        .partenairs-single{
+          margin: 0 2.25rem;
+
+          &:last-child{ margin-right: 0; }
+          img{ margin-right: 0; max-width: 100%; }
+        }
+      }
+    }
+
+
+    #primary .site-main #team{
+      padding: 0;
+
+      .section-inner-content > .section-header{ display: none; }
+
+        .section-inner-content #carousel-team{
+          margin-bottom: 0;
+          height: 500px;
+
+          .carousel-indicators{
+            top: 19%;
+            left: 60%;
+
+            li{
+              border-color: $brand-primary;
+
+              &.active{
+                background: $brand-primary;
+                border-color: $brand-primary;
+              }
+            }
+          }
+          .carousel-inner .item{
+            background: transparent;
+
+            .thumbs{
+              width: calc(33.33333% - 1.5rem);
+              margin-right: 1.5rem;
+              float: left;
+
+              img{
+                margin: 0 auto;
+                display: block;
+                width: 100%;
+                max-height: 500px;
+              }
+            }
+
+            .carousel-caption{
+              position: relative;
+              right: 0;
+              left: 0;
+              bottom: auto;
+              text-shadow: none;
+              padding-bottom: 0;
+              height: 500px;
+              float: left;
+              display: flex;
+              align-items: center;
+
+              .content-caption{
+                position: absolute;
+                top: 50%;
+                left: 0;
+                transform: translateX(0) translateY(-50%);
+                text-align: left;
+                background: transparent;
+                padding: 0;
+                max-width: none;
+
+                .section-header{
+                  display: block;
+
+                  .entry-title{
+                    text-align: left;
+                    font-size: 2.25rem;
+                    color: $gray-dark;
+
+                    &:after{
+                      content: '';
+                      background: $brand-primary;
+                      height: 3px;
+                      width: 110px;
+                      display: block;
+                      margin: 1.5rem 0;
+                    }
+                  }
+                }
+
+                .team-name{
+                  font-size: 1.25rem;
+                  color: $gray-dark;
+                  margin-bottom: 1.5rem;
+                  display: block;
+                  text-align: left;
+                }
+
+                p{
+                  margin-bottom: 1.5rem;
+                  font-size: .8rem;
+                  text-align: left;
+                  color: $gray-dark;
+                  text-shadow: none;
+
+                  &.phone{
+                    margin-right: 1.5rem;
+                  }
+
+                  &.fa-phone.phone{
+                    color: $gray-dark;
+                    display: inline-block;
+                    margin-bottom: 0;
+
+                    &:before{
+                      margin-right: .75rem;
+                      font-size: .75rem;
+                    }
+                  }
+                }
+
+                a{
+                  margin-bottom: 0;
+                  font-size: .8rem;
+                }
+
+                .fa:before{
+                  color: $gray-dark;
+                  margin-right: .75rem;
+                  font-size: .75rem;
+                }
+              }
+            }
+          }
+        }
+      }
+  }
+}
+
+
+@media(min-width:$screen-md) {
+  .page-template-tmp-home{
+
+    #primary .site-main section{
+      &#offer,
+      &#skills,
+      &#property,
+      &#team,
+      &#more-about,
+      &#testimonials,
+      &#partenairs{
+        > .container{
+          width: 940px;
+        }
+      }
+    }
+  }
+}
+
+
+
+@media(min-width:$screen-lg) {
+  .page-template-tmp-home{
+
+    #primary .site-main section{
+      &#offer,
+      &#skills,
+      &#property,
+      &#team,
+      &#more-about,
+      &#testimonials,
+      &#partenairs{
+        > .container{
+          width: 1140px;
+        }
+      }
+    }
+  }
+}
