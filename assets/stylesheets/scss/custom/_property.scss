@@ -1,0 +1,205 @@
+//----------------------------------------//
+//--------------  PROPERTY  --------------//
+//----------------------------------------//
+
+
+.page-template-tmp-property{
+
+  .main-content-area > .row{
+    text-align: center;
+
+    .fil_ariane{
+      display: inline-block;
+    }
+
+    .main-content-inner{
+      margin-top: 1.25rem;
+    }
+  }
+
+
+
+  //---------------
+  //--SECTION
+  //---------------
+  #primary .site-main section{
+    padding: 0;
+    padding-bottom: 5rem;
+  }
+
+
+
+  //----------------------
+  //--SECTIONS PROPERTY
+  //----------------------
+  #primary .site-main #property .section-inner-content .type-page{
+    text-align: center;
+    display: inline-block;
+    width: 100%;
+
+    .section-top{
+      position: relative;
+      display: flex;
+      align-items: flex-end;
+
+      .section-header{
+        display: inline-block;
+        width: auto;
+        float: none;
+        padding: 0;
+        margin: 0 auto;
+      }
+
+      .section-footer{
+        display: inline-block;
+        position: absolute;
+        right: 0;
+      }
+    }
+  }
+
+  //-----------------
+  //--MENU ISOTOPE
+  //-----------------
+  #primary .site-main #property .section-inner-content .section-content{
+    margin-top: 3.25rem;
+
+    > header #options{
+      text-align: center;
+
+      ul{
+        list-style: none;
+        display: inline-block;
+        padding: 0;
+        margin-bottom: 3.75rem;
+
+        li{
+          list-style: none;
+          display: inline-block;
+          margin: 0 1rem;
+
+          a{
+            font-family: $font-family-CTA;
+            font-size: .9rem;
+            color: $gray-dark;
+            text-transform: uppercase;
+
+            &.selected{
+              border-bottom: 2px solid $brand-primary;
+              margin-bottom: 5px;
+            }
+
+            &.selected,
+            &:hover{
+              color: $gray-light;
+            }
+          }
+        }
+      }
+    }
+  }
+
+
+  //-----------------
+  //--ITEM ISOTOPE
+  //-----------------
+  #primary .site-main #property .section-inner-content .section-content .entry-content{
+    .isotope-item{
+      border: $border-small $gray-lighting;
+      margin: 0 auto;
+      margin-bottom: 2.25rem;
+      max-width: 450px;
+
+      .thumbs img{
+        width: 100%;
+      }
+
+      a.inverse{
+        font-family: $font-family-title-medium;
+        font-size: 1.3rem;
+        margin-top: 1.25rem;
+        margin-bottom: .75rem;
+        display: block;
+      }
+
+      .element-price{
+        font-family: $font-family-sans-serif;
+        color: $brand-primary;
+        margin-top: 1rem;
+        margin-bottom: 1.25rem;
+      }
+
+      .element-room{
+        border-top: $border-small $gray-lighting;
+        padding: 1rem 0;
+
+        ul{
+          list-style: none;
+          padding: 0;
+
+          li{
+            display: inline-block;
+
+            &:nth-child(2){
+              &:before,
+              &:after{
+                content: ".";
+                margin: 0 .75rem;
+                display: inline-block;
+                line-height: 1;
+              }
+            }
+
+            p{
+              font-family: $font-family-sans-serif;
+              display: inline-block;
+            }
+          }
+        }
+      }
+    }
+  }
+
+
+  //----------------------
+  //--ISOTOPE ANIMATION
+  //----------------------
+  .isotope,
+  .isotope .isotope-item {
+    transition-duration: 0.8s; }
+
+  .isotope {
+    transition-property: height, width; }
+
+  .isotope .isotope-item {
+    transition-property: transform, opacity; }
+
+  .isotope.no-transition,
+  .isotope.no-transition .isotope-item,
+  .isotope .isotope-item.no-transition {
+    transition-duration: 0s; }
+
+
+
+  //------------------------
+  //-- RESPONSIVE
+  //------------------------
+  @media(min-width:$screen-sm) {
+    #primary .site-main #property .section-inner-content .section-content .entry-content{
+      .isotope-item{
+        margin-right: 1.5rem;
+        width: calc(33.33333% - 1.5rem);
+        margin-bottom: 0;
+
+        &:nth-child(3n+3) { margin-right: 0; }
+        &:nth-child(3n+1) { margin-left: .75rem; }
+
+        a.inverse{ font-size: 1.2rem; }
+        .element-room ul li p{ font-size: .65rem; }
+      }
+    }
+  }
+
+
+
+}

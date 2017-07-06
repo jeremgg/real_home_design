@@ -1,0 +1,73 @@
+//------------------------------------------------//
+//--------------  SIDEBAR PROPERTY  --------------//
+//------------------------------------------------//
+
+
+.property-sidebar{
+  margin-top: 3.25rem;
+  padding-left: 0;
+
+  .well{
+    .taxonomy{
+      margin-bottom: 35px;
+
+      .fa{
+        margin-right: 15px;
+      }
+
+      p{
+        display: inline-block;
+      }
+
+      a{
+        font-size: 16px;
+        font-family: $font-family-CTA;
+        text-transform: capitalize;
+      }
+    }
+
+
+    .meta{
+      padding-top: 30px;
+      padding-bottom: 40px;
+      border-top: $border #f3f2f2;
+      border-bottom: $border #f3f2f2;
+
+      p span{ color: $gray-dark; }
+
+      p.date{
+        text-transform: capitalize;
+      }
+    }
+
+    .property-content{
+      margin-top: 35px;
+
+      p{
+        font-size: .7rem;
+        margin-bottom: 35px;
+
+      }
+
+      a{
+        font-size: .8rem;
+        padding: 10px 15px;
+      }
+    }
+
+
+  }
+}
+
+
+
+
+//----------------
+//--RESPONSIVE
+//----------------
+@media(min-width:$screen-sm) {
+  .property-sidebar{
+    width: 25%;
+    padding-left: 2rem;
+  }
+}
