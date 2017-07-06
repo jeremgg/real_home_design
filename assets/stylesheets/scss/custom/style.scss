@@ -1,0 +1,64 @@
+/*
+Theme Name: real home design
+Author: jerem
+Description: Thème real home design
+Version: 1.0
+Domain Path: /languages/
+*/
+
+
+
+/*------------------------------------------------*/
+/*--------------  TABLE OF CONTENT  --------------*/
+/*------------------------------------------------*/
+/*
+1. Global
+2. Header
+3. Nav
+4. Footer
+5. Posts list
+6. Posts
+7. Archives
+8. Blog's sidebar
+9. Home page
+10. About page
+11. Skills page
+12. carousel
+13. Testimonials page
+14. Contact page
+15. property list page
+16. property single page
+17. Siderbar property
+18. 404 page
+19. Search page
+*/
+
+
+
+
+@import "../bootstrap/bootstrap/_variables.scss";
+
+@import "reset";
+
+@import "header";
+@import "nav";
+@import "footer";
+
+@import "list_post";
+@import "posts";
+@import "archives";
+@import "sidebar";
+
+@import "caroussel";
+@import "home";
+@import "about";
+@import "skills";
+@import "testimonials";
+@import "contact";
+
+@import "property";
+@import "property-single";
+@import "sidebar-property";
+
+@import "404";
+@import "search";
