@@ -1,0 +1,44 @@
+//----------------------------------------//
+//--------------  ARCHIVES  --------------//
+//----------------------------------------//
+
+
+.archive{
+  .row > .page-header{
+    padding: 0;
+    margin-top: 1.25rem;
+
+    h1{
+      font-family: $font-family-title;
+      color: $brand-primary;
+      font-size: 1.5rem;
+    }
+
+    .archive-description{
+      font-family: $font-family-content;
+      font-size: .9rem;
+      color: $gray-light;
+      line-height: 1.5;
+      margin-top: .5rem;
+      padding-right: 2rem;
+    }
+  }
+
+  .main-content-area > .row .main-content-inner #primary .site-main article{
+    margin-top: 0;
+  }
+}
+
+
+
+//--------------------
+//-- RESPONSIVE
+//--------------------
+@media(min-width:$screen-sm) {
+  .archive{
+    .row > .page-header{
+      h1{ font-size: 1.25rem; }
+      .archive-description{ font-size: .8rem; }
+    }
+  }
+}

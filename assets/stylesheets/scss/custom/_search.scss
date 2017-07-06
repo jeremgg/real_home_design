@@ -1,0 +1,137 @@
+//--------------------------------------//
+//--------------  SEARCH  --------------//
+//--------------------------------------//
+
+
+.search-results{
+
+  .main-content-area > .row{
+    .fil_ariane{
+      display: none;
+    }
+
+    .main-content-area > .row .main-content-inner{
+      margin-top: 0;
+      margin-bottom: 5rem;
+      padding-right: 0 !important;
+      border: none !important;
+    }
+  }
+
+
+  //---------------
+  //--SECTIONS
+  //---------------
+  #primary .site-main section{
+    .section-top{
+      position: relative;
+      display: block;
+
+      .section-header{
+        display: block;
+        width: auto;
+        float: none;
+        padding: 0;
+      }
+    }
+  }
+
+
+  #primary .site-main section .section-content{
+    margin-top: 3.25rem;
+    border-top: $border $border-color;
+  }
+
+
+
+  //---------------
+  //--POST
+  //---------------
+  #primary .site-main section .section-content article{
+    margin: 2rem 0;
+    padding-bottom: 2rem;
+    border-bottom: $border $border-color;
+
+    &:nth-child(2){ margin-top: 0; }
+
+    .blog-item-wrap .post-inner-content{
+      .section-top{
+        position: relative;
+        display: flex;
+        align-items: flex-end;
+        margin-bottom: 1.5rem;
+
+        .section-header{
+          display: inline-block;
+          width: auto;
+          float: none;
+          padding: 0;
+        }
+
+        .section-footer{
+          display: inline-block;
+          position: absolute;
+          right: 0;
+        }
+      }
+
+
+      .post-thumbnail img{
+        border-radius: 4px;
+        width: 100%;
+      }
+
+      .entry-summary{
+        p{
+          margin: 1.5rem 0;
+        }
+
+        a{
+          font-size: .85rem;
+        }
+      }
+    }
+  }
+
+
+
+  //---------------
+  //--PAGINATION
+  //---------------
+  #primary .site-main section .pagination li{
+    .btn-primary, .btn-default{
+      margin-right: 1rem;
+      padding: 1rem 1.25rem;
+
+      &.active{
+        box-shadow: none;
+      }
+    }
+
+    .btn-default{
+      cursor: auto;
+      background: #f3f2f2;
+
+      &:hover{
+        background: #f3f2f2;
+      }
+    }
+  }
+
+
+
+  //----------------
+  //--RESPONSIVE
+  //----------------
+  @media(min-width:$screen-sm) {
+    .main-content-area > .row .main-content-inner{
+      margin-top: 2.5rem;
+      padding-right: 2rem !important;
+      border-right: $border $border-color !important;
+      margin-bottom: 5rem;
+      width: 75%;
+    }
+  }
+
+
+}

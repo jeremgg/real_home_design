@@ -1,0 +1,124 @@
+//------------------------------------------//
+//--------------  LIST POSTS  --------------//
+//------------------------------------------//
+
+
+.blog,
+.archive{
+
+  .main-content-area > .row .main-content-inner{
+    margin-top: 2.5rem;
+    margin-bottom: 5rem;
+    padding-right: 0 !important;
+    border: none !important;
+  }
+
+  #primary .site-main > header{
+    display: none;
+  }
+
+
+
+  //---------------
+  //--POST
+  //---------------
+  #primary .site-main article{
+    margin: 2rem 0;
+    padding-bottom: 2rem;
+    border-bottom: $border $border-color;
+
+    &:nth-child(2){ margin-top: 0; }
+
+    .blog-item-wrap .post-inner-content{
+      .section-top{
+        position: relative;
+        display: flex;
+        align-items: flex-end;
+        margin-bottom: 1.5rem;
+
+        .section-header{
+          display: inline-block;
+          width: auto;
+          float: none;
+          padding: 0;
+        }
+
+        .section-footer{
+          display: inline-block;
+          position: absolute;
+          right: 0;
+        }
+      }
+
+
+      .post-thumbnail img{
+        border-radius: 4px;
+        width: 100%;
+      }
+
+      .entry-content{
+        p{
+          margin: 1.5rem 0;
+        }
+
+        a{
+          font-size: .85rem;
+        }
+      }
+    }
+  }
+
+
+
+  //---------------
+  //--PAGINATION
+  //---------------
+  #primary .site-main .pagination li{
+    .btn-primary, .btn-default{
+      margin-right: 1rem;
+      padding: 1rem 1.25rem;
+
+      &.active{
+        box-shadow: none;
+      }
+    }
+
+    .btn-default{
+      cursor: auto;
+      background: #f3f2f2;
+
+      &:hover{
+        background: #f3f2f2;
+      }
+    }
+  }
+}
+
+
+
+//----------------
+//--RESPONSIVE
+//----------------
+@media(min-width:$screen-sm) {
+  .blog,
+  .archive{
+
+    .main-content-area > .row .main-content-inner{
+      margin-top: 2.5rem;
+      padding-right: 2rem !important;
+      border-right: $border $border-color !important;
+      margin-bottom: 5rem;
+      width: 75%;
+    }
+
+    #primary .site-main article{
+      .blog-item-wrap .post-inner-content{
+        .entry-content{
+          a{
+            font-size: .8rem;
+          }
+        }
+      }
+    }
+  }
+}
