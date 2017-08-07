@@ -141,7 +141,26 @@
       input[type="text"],
       textarea{
         margin-bottom: 1.25rem;
+
+        &.wpcf7-not-valid{
+          background: $state-danger-text;
+          color: white !important;
+        }
       }
+
+      .wpcf7-validation-errors{
+        border: none;
+        padding: 0;
+        margin-top: 1rem;
+        margin-left: 0;
+        margin-right: 0;
+        color: red;
+        font-size: 1.25rem;
+      }
+    }
+
+    .wpcf7-not-valid-tip{
+      display: none;
     }
   }
 
