@@ -1,262 +1,263 @@
-
-
-
-
-/*---------------------------------------------*/
-/*--------------  14 - CONTACTS  --------------*/
-/*---------------------------------------------*/
-
 .page-template-tmp-contact{
 
-  .main-content-area > .row .main-content-inner{
-    margin-top: 1.25rem;
-  }
+    /* ===========================
+             CONTACT PAGE
+    =========================== */
+    .main-content-area > .row .main-content-inner{
+        margin-top: .5rem;
 
+        #primary .site-main section{
+          padding: 0;
 
-
-
-  //---------------
-  //--GOOGLE MAPS
-  //---------------
-  #primary .site-main section{
-    padding: 0;
-
-    .section-title{ text-transform: capitalize; }
-  }
-
-
-
-
-  //-------------------
-  //--CONTENT HEADER
-  //-------------------
-  #primary .site-main #map-contact .section-inner-content article{
-    .section-top{
-      position: relative;
-      display: flex;
-      align-items: flex-end;
-
-      .section-header{
-        display: inline-block;
-        width: auto;
-        float: none;
-        padding: 0;
-      }
-
-      .section-footer{
-        display: inline-block;
-        position: absolute;
-        right: 0;
-      }
-    }
-  }
-
-
-
-
-  //----------------
-  //--GOOGLE MAPS
-  //----------------
-  #primary .site-main #map-contact .section-inner-content article .section-content{
-    margin-top: 3rem;
-    margin-bottom: 3rem;
-    border: $border $gray-lighting;
-
-    p:last-child{ display: none; }
-  }
-
-
-
-
-  //------------------
-  //--CONTACT INFO
-  //------------------
-  #primary .site-main #contact{
-    padding-bottom: 5rem;
-
-    .section-inner-content .contact-info{
-      .section-top{
-        margin-bottom: 1.5em;
-
-        .section-header{
-          float: none;
+          .section-title{ text-transform: capitalize; }
         }
-      }
+    }
 
-      .section-content{
+
+
+
+    /* ===========================
+              PAGE TITLE
+    =========================== */
+    #primary .site-main #map-contact .section-inner-content article{
+        .section-top{
+            position: relative;
+            display: flex;
+            align-items: flex-end;
+
+            .section-header{
+                display: inline-block;
+                width: auto;
+                float: none;
+                padding: 0;
+            }
+
+            .section-footer{
+                display: inline-block;
+                position: absolute;
+                right: 0;
+            }
+        }
+
+        @media(max-width:$screen-sm) {
+            .section-top{
+                display: block;
+
+                .section-header, .section-footer{
+                    width: 100%;
+                    display: block;
+                    float: none !important;
+                }
+
+                .section-footer{
+                    margin-top: .25rem;
+                    position: relative;
+                }
+            }
+        }
+    }
+
+
+
+
+    /* ===========================
+              GOOGLE MAP
+    =========================== */
+    #primary .site-main #map-contact .section-inner-content article .section-content{
+        margin-top: 3rem;
+        margin-bottom: 3rem;
+        border: $border $gray-lighting;
+
+        p:last-child{ display: none; }
+    }
+
+    @media(min-width:$screen-md) {
+        #primary .site-main #map-contact .section-inner-content article .section-content{
+          margin-top: 2.75rem;
+          margin-bottom: 2.75rem;
+        }
+    }
+
+
+
+
+    /* ===========================
+          CONTACT INFO BLOCK
+    =========================== */
+    #primary .site-main #contact{
+        padding-bottom: 5rem;
+
+        .section-inner-content .contact-info{
+            .section-top{
+                margin-bottom: 1.5em;
+
+                .section-header{
+                    float: none;
+                }
+            }
+        }
+    }
+
+
+
+
+    /* ===========================
+          CONTACT INFO CONTENT
+    =========================== */
+    #primary .site-main #contact .section-inner-content .contact-info .section-content{
         > p{
-          font-size: .95rem;
+            font-size: .95rem;
         }
 
         .adresse{
-          margin-top: 1.5rem;
-          margin-bottom: 1.25rem;
+            margin-top: 1.5rem;
+            margin-bottom: 1.25rem;
 
-          h4{
-            line-height: 1.5;
+            h4{
+                line-height: 1.5;
 
-            &:last-child{ margin-bottom: 0; }
-          }
+                &:last-child{ margin-bottom: 0; }
+            }
         }
 
         .coordonnees{
-          > p{
-            font-size: .95rem;
-            line-height: 1.5;
+            > p{
+                font-size: .95rem;
+                line-height: 1.5;
 
-            &:last-child{ margin-bottom: 0; }
+                &:last-child{ margin-bottom: 0; }
 
-            span{
-              font-family: $font-family-date;
+                span{
+                    font-family: $font-family-date;
+                }
+
+                a{
+                    text-decoration: underline;
+                }
+            }
+        }
+    }
+
+    @media(min-width:$screen-sm) {
+        #primary .site-main #contact .section-content{
+            > p{ font-size: .85rem !important; }
+            .coordonnees > p{ font-size: .85rem !important; }
+        }
+    }
+
+    @media(min-width:$screen-md) {
+        #primary .site-main #contact{
+            .section-content > p{ font-size: .7rem; }
+            .coordonnees > p{ font-size: .7rem; }
+        }
+    }
+
+
+
+
+    /* ===========================
+          CONTACT FORM BLOCK
+    =========================== */
+    #primary .site-main #contact .section-inner-content .contact-form{
+        margin-top: 3.25rem;
+
+        .section-top{
+            margin-bottom: 2em;
+
+            .section-header{
+                float: none;
+            }
+        }
+    }
+
+    @media(min-width:$screen-sm) {
+        #primary .site-main #contact .section-inner-content .contact-form{
+            padding-left: 2.5rem;
+            margin-top: 0;
+
+            .section-top{ margin-bottom: 2em; }
+        }
+    }
+
+
+
+
+    /* ===========================
+          CONTACT FORM CONTENT
+    =========================== */
+    #primary .site-main #contact .section-inner-content .contact-form{
+        .section-content form{
+            input[type="email"],
+            input[type="text"],
+            textarea{
+                margin-bottom: 1.25rem;
+
+                &.wpcf7-not-valid{
+                    background: $state-danger-text;
+                    color: white !important;
+                }
             }
 
-            a{
-              text-decoration: underline;
+            .wpcf7-validation-errors{
+                border: none;
+                padding: 0;
+                margin-top: 1rem;
+                margin-left: 0;
+                margin-right: 0;
+                color: red;
+                font-size: 1.25rem;
             }
-          }
-        }
-      }
-    }
-  }
-
-
-
-
-  //---------------
-  //--FORM
-  //---------------
-  #primary .site-main #contact .section-inner-content .contact-form{
-    margin-top: 3.25rem;
-
-    .section-top{
-      margin-bottom: 2em;
-
-      .section-header{
-        float: none;
-      }
-    }
-
-    .section-content form{
-      input[type="email"],
-      input[type="text"],
-      textarea{
-        margin-bottom: 1.25rem;
-
-        &.wpcf7-not-valid{
-          background: $state-danger-text;
-          color: white !important;
-        }
-      }
-
-      .wpcf7-validation-errors{
-        border: none;
-        padding: 0;
-        margin-top: 1rem;
-        margin-left: 0;
-        margin-right: 0;
-        color: red;
-        font-size: 1.25rem;
-      }
-    }
-
-    .wpcf7-not-valid-tip{
-      display: none;
-    }
-  }
-
-
-
-  //----------------
-  //--RESPONSIVE
-  //----------------
-  @media(min-width:$screen-sm) {
-    .main-content-area > .row .main-content-inner{ margin-top: 1.25rem; }
-
-    #primary .site-main #contact{
-      .section-content{
-        > p{ font-size: .85rem !important; }
-        .coordonnees > p{ font-size: .85rem !important; }
-      }
-    }
-
-    #primary .site-main #contact .section-inner-content .contact-form{
-      padding-left: 2.5rem;
-      margin-top: 0;
-
-      .section-top{ margin-bottom: 2em; }
-
-      .section-content form{
-        input[type="email"],
-        input[type="text"],
-        textarea{
-          margin-bottom: 1rem;
         }
 
-        input[type="email"]{ margin-left: 1rem; }
-
-        input[type="email"],
-        input[type="text"]{
-          width: calc(50% - (1.4rem / 2));
-          display: inline-block;
-        }
-      }
-    }
-  }
-
-
-
-
-  @media(min-width:$screen-md) {
-    .main-content-area > .row .main-content-inner{ margin-top: 1.25rem; }
-
-    #primary .site-main #map-contact .section-inner-content article .section-content{
-      margin-top: 3.25rem;
-      margin-bottom: 3.25rem;
-    }
-
-    #primary .site-main #contact{
-      .section-content > p{ font-size: .7rem; }
-      .coordonnees > p{ font-size: .7rem; }
-    }
-
-    #primary .site-main #contact .section-inner-content .contact-form{
-      .section-content form{
-        input[type="email"],
-        input[type="text"],
-        textarea{
-          margin-bottom: 1.25rem;
+        .wpcf7-not-valid-tip{
+            display: none;
         }
 
-        input[type="email"]{
-          margin-left: 1.25rem;
+
+        @media(min-width:$screen-sm) {
+            .section-content form{
+                input[type="email"],
+                input[type="text"],
+                textarea{
+                    margin-bottom: 1rem;
+                }
+
+                input[type="email"]{ margin-left: 1rem; }
+
+                input[type="email"],
+                input[type="text"]{
+                    width: calc(50% - (1.4rem / 2));
+                    display: inline-block;
+                }
+            }
         }
 
-        input[type="email"],
-        input[type="text"]{
-          width: calc(50% - (1.7rem / 2));
+        @media(min-width:$screen-md) {
+            .contact-form .section-content form{
+                input[type="email"],
+                input[type="text"],
+                textarea{
+                    margin-bottom: 1.25rem;
+                }
+
+                input[type="email"]{
+                    margin-left: 1.25rem;
+                }
+
+                input[type="email"],
+                input[type="text"]{
+                    width: calc(50% - (1.7rem / 2));
+                }
+            }
         }
-      }
+
+        @media(min-width:$screen-lg) {
+            .contact-form .section-content form{
+                input[type="email"],
+                input[type="text"]{
+                    width: calc(50% - (1.25rem / 2));
+                }
+            }
+        }
     }
-  }
-
-
-
-
-  @media(min-width:$screen-lg) {
-    #primary .site-main #contact .section-inner-content .contact-form{
-      .section-content form{
-        input[type="email"],
-        input[type="text"]{
-          width: calc(50% - (1.25rem / 2));
-        }
-      }
-    }
-  }
-
-
 }
-
-
-
-
-/*-----------------------------------------*/

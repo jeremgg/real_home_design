@@ -1,0 +1,29 @@
+.error404 {
+  /* ===========================
+              404 PAGE
+    =========================== */
+  /* ===========================
+              SECTIONS
+    =========================== */
+  /* ===========================
+              PAGE TITLE
+    =========================== */ }
+  .error404 .main-content-area > .row .fil_ariane {
+    display: none; }
+  .error404 .main-content-area > .row .main-content-inner {
+    margin-top: 0; }
+  .error404 #primary .site-main section {
+    padding-bottom: 5rem; }
+    .error404 #primary .site-main section .section-content p {
+      font-size: .95rem;
+      text-align: center; }
+  .error404 #primary .site-main section .section-top {
+    position: relative;
+    display: block; }
+    .error404 #primary .site-main section .section-top .section-header {
+      display: block;
+      width: auto;
+      float: none;
+      padding: 0; }
+      .error404 #primary .site-main section .section-top .section-header .page-title {
+        text-align: center; }

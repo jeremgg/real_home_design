@@ -1,113 +1,102 @@
-
-
-
-
-/*-------------------------------------------*/
-/*--------------  8 - SIDEBAR  --------------*/
-/*-------------------------------------------*/
-
+/* ===========================
+        SIDEBAR BLOG
+=========================== */
 .widget-area{
   margin-top: 2.5rem;
 }
 
-
-.widget-area .well .widget{
-  margin-bottom: 3.25rem;
-
-  &:last-child{ margin-bottom: 0; }
-
-  .widget-title{
-    color: $gray-dark;
-    margin-bottom: 1.5rem;
-  }
-
-  ul{
-    padding: 0;
-
-    li{
-      margin-bottom: .5rem;
-      list-style: none;
-
-      &:last-child{ margin-bottom: 0; }
-
-      a{
-        text-transform: capitalize;
-
-        &:hover{
-          color: $brand-primary;
-        }
-      }
-    }
-  }
-}
-
-
-
-.widget-area .well .popular-posts-wrapper .post{
-  margin-bottom: 1.5rem;
-
-  .post-content{
-    a{
-      color: $gray-dark;
-
-      &:hover{
-        color: $brand-primary;
-      }
-
-      &.read-more{ display: none; }
-    }
-
-    p{
-      font-size: .8rem;
-      margin: .4rem 0;
-    }
-
-    .post-date{
-      font-family: $font-family-date;
-      font-size: .8rem;
-      color: $gray-light;
-    }
-  }
-}
-
-
-
-
-//----------------
-//--RESPONSIVE
-//----------------
 @media(min-width:$screen-sm) {
-  .widget-area{
-    width: 25%;
-    padding-left: 2rem;
-  }
-
-  .widget-area .well .widget  ul li{
-    margin-bottom: .20rem;
-  }
-
-  .widget-area .well .popular-posts-wrapper .post{
-    .post-content{
-      p{ font-size: .8rem; }
-
-      .post-date{ font-size: .8rem; }
+    .widget-area{
+        width: 25%;
+        padding-left: 2rem;
     }
-  }
 }
 
 
+
+
+
+/* ===========================
+            WIDGET
+=========================== */
+.widget-area .well .widget{
+    margin-bottom: 3.25rem;
+
+    &:last-child{ margin-bottom: 0; }
+}
+
+
+
+
+/* ===========================
+        WIDGET CONTENT
+=========================== */
+.widget-area .well .widget{
+    .widget-title{
+        color: $gray-dark;
+        margin-bottom: 1.5rem;
+    }
+
+    ul{
+        padding: 0;
+
+        li{
+            margin-bottom: .5rem;
+            list-style: none;
+
+            &:last-child{ margin-bottom: 0; }
+
+            a{
+                text-transform: capitalize;
+
+                &:hover{
+                    color: $brand-primary;
+                }
+            }
+        }
+
+        @media(min-width:$screen-sm) {
+            li{ margin-bottom: .20rem; }
+        }
+
+    }
+}
+
+
+
+/* ===========================
+      WIDGET RECENT POSTS
+=========================== */
+.widget-area .well .popular-posts-wrapper .post{
+    margin-bottom: 1.5rem;
+
+    .post-content{
+        a{
+            color: $gray-dark;
+
+            &:hover{
+                color: $brand-primary;
+            }
+
+            &.read-more{ display: none; }
+        }
+
+        p{
+            font-size: .8rem;
+            margin: .4rem 0;
+        }
+
+        .post-date{
+            font-family: $font-family-date;
+            font-size: .8rem;
+            color: $gray-light;
+        }
+    }
+}
 
 @media(min-width:$screen-md) {
-  .widget-area .well .popular-posts-wrapper .post{
-    .post-content{
-      p{ font-size: .65rem; }
-
-      .post-date{ font-size: .65rem; }
+    .widget-area .well .popular-posts-wrapper .post .post-content{
+        p{ font-size: .65rem; }
+        .post-date{ font-size: .65rem; }
     }
-  }
 }
-
-
-
-
-/*-----------------------------------------*/

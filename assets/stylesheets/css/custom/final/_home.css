@@ -1,0 +1,11 @@
+.page-template-tmp-home {
+  /* ===========================
+               HOME PAGE
+    =========================== */ }
+  .page-template-tmp-home .main-content-area > .row {
+    margin: 0; }
+    .page-template-tmp-home .main-content-area > .row > .container {
+      padding: 0;
+      width: 100%; }
+      .page-template-tmp-home .main-content-area > .row > .container .main-content-inner {
+        float: none; }

@@ -1,87 +1,97 @@
-
-
-
-
-/*----------------------------------------------*/
-/*--------------  18 - ERROR 404  --------------*/
-/*----------------------------------------------*/
-
 .error404{
 
-  .main-content-area > .row{
-    .fil_ariane{
-      display: none;
-    }
-
-    .main-content-inner{
-      margin-top: 0;
-    }
-  }
-
-  //---------------
-  //--SECTIONS
-  //---------------
-  #primary .site-main section{
-    padding-bottom: 5rem;
-
-    .section-content p{
-      font-size: .95rem;
-      text-align: center;
-    }
-  }
-
-
-  #primary .site-main section{
-    .section-top{
-      position: relative;
-      display: block;
-
-      .section-header{
-        display: block;
-        width: auto;
-        float: none;
-        padding: 0;
-
-        .page-title{
-          text-align: center;
+    /* ===========================
+              404 PAGE
+    =========================== */
+    .main-content-area > .row{
+        .fil_ariane{
+            display: none;
         }
-      }
+
+        .main-content-inner{
+            margin-top: 0;
+        }
     }
 
-  }
 
 
-  #primary .site-main section .section-content{
-    margin-top: 3.25rem;
 
-    .navbar-brand{
-      float: none;
-      display: block;
-      margin: 0 auto;
-      margin-bottom: 3.25rem;
-      padding: 0;
-      height: auto;
+    /* ===========================
+              SECTIONS
+    =========================== */
+    #primary .site-main section{
+        padding-bottom: 5rem;
 
-      img{
-        margin: 0 auto;
-        width: 100%;
-        max-width: 250px;
-      }
+        .section-content p{
+            font-size: .95rem;
+            text-align: center;
+        }
     }
 
-    p{
-      margin-bottom: 1.5rem;
+
+
+
+    /* ===========================
+              PAGE TITLE
+    =========================== */
+    #primary .site-main section{
+        .section-top{
+            position: relative;
+            display: block;
+
+            .section-header{
+                display: block;
+                width: auto;
+                float: none;
+                padding: 0;
+
+                .page-title{
+                    text-align: center;
+                }
+            }
+        }
     }
 
-    form{
-      max-width: 600px;
-      margin: 0 auto;
-    }
-  }
 
+
+
+    /* ===========================
+             404 CONTENT
+    =========================== */
+    #primary .site-main section .section-content{
+        margin-top: 3.25rem;
+
+        .navbar-brand{
+            float: none;
+            display: block;
+            margin: 0 auto;
+            margin-bottom: 3.25rem;
+            padding: 0;
+            height: auto;
+
+            img{
+                margin: 0 auto;
+                width: 100%;
+                max-width: 250px;
+            }
+        }
+
+        p{
+            margin-bottom: 1.5rem;
+        }
+
+        form{
+            max-width: 600px;
+            margin: 0 auto;
+
+            .input-group{
+                display: block;
+            }
+
+            .input-group-btn{
+                display: block;
+                padding: 2px;
+            }
+        }
+    }
 }
-
-
-
-
-/*-----------------------------------------*/

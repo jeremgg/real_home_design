@@ -63,7 +63,7 @@
 										//setup new WP_Query
 										$wp_query = new WP_Query(
 											array(
-												'post_type'			=>	'gallery',
+												'post_type'		  =>	'gallery',
 												'posts_per_page'  => '9'
 											)
 										);
@@ -73,7 +73,14 @@
 									?>
 
 									<div class="element<?php if( function_exists('jss_taxonomy_name')){ jss_taxonomy_name(); }?> col-xs-12 col-sm-4">
-											<a class="thumbs" href="<?php the_permalink(); ?>"><?php the_post_thumbnail('album-grid'); ?></a>
+										<?php $image = get_field('image'); if (!empty($image)): ?>
+											<a class="thumbs" href="<?php the_permalink(); ?>">
+												<img src="<?php echo $image['url']; ?>" class="attachment-album-grid size-album-grid wp-post-image" width="450" height="297">
+											</a>
+										<?php endif; ?>
+
+										<!-- <a class="thumbs" href="<?php //the_permalink(); ?>"><?php //the_post_thumbnail('album-grid'); ?></a> -->
+
 											<a class="inverse element-title" href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
 											<p class="element-place"><?php the_field('lieu'); ?></p>
 											<h4 class="element-price"><?php the_field('prix'); ?> €</h4>
@@ -92,9 +99,7 @@
 							</div><!--end content-->
 						</div>
 				</div>
-
 		</section>
-
 	</main><!-- #main -->
 </div><!-- #primary -->
 

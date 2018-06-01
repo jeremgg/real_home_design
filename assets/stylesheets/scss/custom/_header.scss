@@ -1,62 +1,26 @@
-
-
-
-
-/*------------------------------------------*/
-/*--------------  2 - HEADER  --------------*/
-/*------------------------------------------*/
-
 .main-content-area > .row{
-  margin: 4rem 0 0 0;
+    margin: 2.3rem 0 0 0;
 }
 
+
+
+/* ===========================
+          FIL ARIANE
+=========================== */
 .main-content-area > .row .fil_ariane{
-  font-size: 1rem;
-  padding: 0;
-  display: block;
-
-  p{
-    font-family: $font-family-CTA;
     font-size: 1rem;
-    display: inline-block;
-  }
+    padding: 0;
+    display: block;
 
-  a{
-    font-family: $font-family-title;
-    color: $brand-primary;
-    font-size: 1rem;
-  }
+    p{
+        font-family: $font-family-CTA;
+        font-size: 1rem;
+        display: inline-block;
+    }
+
+    a{
+        font-family: $font-family-title;
+        color: $brand-primary;
+        font-size: 1rem;
+    }
 }
-
-
-
-
-//------------------------
-//-- RESPONSIVE
-//------------------------
-@media(min-width:$screen-sm) {
-  .main-content-area > .row{
-    margin: 4rem 0 0 0;
-  }
-
-  .main-content-area > .row .fil_ariane{
-    font-size: 1rem;
-
-    p{ font-size: 1rem; }
-    a{ font-size: 1rem; }
-  }
-}
-
-
-
-
-@media(min-width:$screen-md) {
-  .main-content-area > .row{
-    margin: 4rem 0 0 0;
-  }
-}
-
-
-
-
-/*-----------------------------------------*/

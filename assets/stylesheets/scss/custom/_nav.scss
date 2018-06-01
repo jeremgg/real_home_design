@@ -1,172 +1,179 @@
-
-
-
-
-/*---------------------------------------*/
-/*--------------  3 - NAV  --------------*/
-/*---------------------------------------*/
-
+/* ===========================
+            NAVBAR
+=========================== */
 .navbar-default {
-  background-color: $white;
+    background-color: $white;
 
-  > .container{
-    margin: 0;
-    padding: 0;
-    width: 100%;
-  }
-
-  .site-navigation-inner{ min-height: 78px; }
+    .site-navigation-inner{ min-height: 78px; }
 }
 
+@media(max-width:$screen-sm) {
+    .navbar-default > .container{
+        width: 100%;
+        margin: 0;
+        padding: 0;
+    }
+}
+
+@media(min-width:$screen-md) {
+    .navbar-default{
+        max-height: 80px;
+    }
+
+    .navbar-default > .container{
+        margin: 0 auto;
+    }
+}
+
+
+
+
+/* ===========================
+        NAVBAR HEADER
+=========================== */
 .navbar-default .navbar-header{
-  display: flex;
-  align-items: center;
-  position: relative;
-  padding-left:  15px;
-  padding-right: 15px;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
 
-
-  .navbar-brand{
-    height: auto;
-    max-width: 140px;
-  }
-
-  .navbar-toggle{
-    position: absolute;
-    transform: translateY(-50%);
-    top: 50%;
-    right: 15px;
-    margin: 0;
-
-    &:active,
-    &:focus{
-      background: transparent;
+@media(max-width:$screen-md) {
+    .navbar-default .navbar-header{
+        padding-left:  15px;
+        padding-right: 15px;
     }
-
-    &:hover{
-      background: $brand-primary;
-
-      .icon-bar{
-        background: $white;
-      }
-    }
-  }
 }
 
 
 
-.navbar-default .navbar-collapse{
-  width: 100%;
 
-  .navigation ul{
+/* ===========================
+     NAVBAR HEADER CONTENT
+=========================== */
+.navbar-default .navbar-header{
+    .navbar-brand{
+        height: auto;
+        max-width: 140px;
+    }
+
+    .navbar-toggle{
+        position: absolute;
+        transform: translateY(-50%);
+        top: 50%;
+        right: 15px;
+        margin: 0;
+
+        &:active,
+        &:focus{
+            background: transparent;
+        }
+
+        &:hover{
+            background: $brand-primary;
+
+            .icon-bar{
+                background: $white;
+            }
+        }
+    }
+}
+
+
+
+
+/* ===========================
+        NAVBAR COLLAPSE
+=========================== */
+.navbar-default .navbar-collapse .navigation ul{
     margin-top: 0;
 
     li{
-      &.active{
-        background: #f2f2f2;
-      }
+        &.active{
+            background: #f2f2f2;
+        }
 
-      &:hover{
-        background: #f2f2f2;
-      }
-
-      a{
-        font-size: 1.25rem;
-        padding: 2rem 1rem;
-        text-align: center;
-        color: $gray-dark;
-      }
-    }
-  }
-}
-
-
-.navbar-default .navbar-collapse{
-  .rs{
-    ul{
-      margin-top: 1rem;
-      margin-bottom: 1rem;
-      text-align: center;
-
-      li{
-        display: inline-block;
+        &:hover{
+            background: #f2f2f2;
+        }
 
         a{
-          display: inline-block;
-          font-size: 0px;
-          cursor: pointer;
-          margin: 0 10px;
-          width: 32px;
-          height: 32px;
-          line-height: 1rem;
-          border-radius: 50%;
-          text-align: center;
-          color: #f2f2f2;
-          border: 2px solid #f2f2f2;
-          padding: 0;
-
-          i{
-            font-size: 1.15rem;
+            font-size: 1.25rem;
+            padding: 2rem 1rem;
+            text-align: center;
             color: $gray-dark;
-            line-height: 1.9rem;
-          }
-
-          &:hover{
-            background: $brand-primary;
-            border-color: $brand-primary;
-
-            i{
-              color: $white;
-            }
-          }
         }
-      }
     }
-  }
+}
+
+@media(max-width:$screen-md) {
+    .navbar-default .navbar-collapse{
+        width: 100%;
+    }
+}
+
+@media(min-width:$screen-md) {
+    .navbar-default .navbar-collapse{
+        .navigation, .rs{
+            display: inline-block;
+        }
+    }
+
+    .navbar-default .navbar-collapse .navigation ul li a{
+        font-size: .9rem;
+    }
 }
 
 
 
 
 
-//--------------------
-//-- RESPONSIVE
-//--------------------
-@media(min-width:$screen-md) {
-  .navbar-default{
-    max-height: 80px;
+/* ===========================
+          HEADER RS
+=========================== */
+.navbar-default .navbar-collapse .rs{
+    ul{
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+        text-align: center;
 
-    .site-navigation-inner{ height: 78px; }
-  }
+        li{
+            display: inline-block;
 
-  .navbar-default > .container{
-    width: 940px;
-    margin: 0 auto;
-    padding-left:  15px;
-    padding-right: 15px;
-  }
+            a{
+                display: inline-block;
+                font-size: 0px;
+                cursor: pointer;
+                margin: 0 10px;
+                width: 32px;
+                height: 32px;
+                line-height: 1rem;
+                border-radius: 50%;
+                text-align: center;
+                color: #f2f2f2;
+                border: 2px solid #f2f2f2;
+                padding: 0;
 
-  .navbar-default .navbar-header{
-    padding-left:  0;
-    padding-right: 0;
-  }
+                i{
+                    font-size: 1.15rem;
+                    color: $gray-dark;
+                    line-height: 1.9rem;
+                }
 
-  .navbar-default .navbar-collapse{
-    width: auto;
-  }
+                &:hover{
+                    background: $brand-primary;
+                    border-color: $brand-primary;
 
-  .navbar-default .navbar-collapse{
-    .navigation,
-    .rs{
-      display: inline-block;
+                    i{
+                        color: $white;
+                    }
+                }
+            }
+        }
     }
-  }
+}
 
 
-  .navbar-default .navbar-collapse .navigation ul li a{
-    font-size: .9rem;
-  }
-
+@media(min-width:$screen-md) {
   .navbar-default .navbar-collapse{
     .rs ul li a{
       margin: 0 4px;
@@ -178,29 +185,3 @@
     }
   }
 }
-
-
-@media(min-width:$screen-lg) {
-  .navbar-default > .container{
-    width: 1140px;
-    margin: 0 auto;
-    padding-left:  15px;
-    padding-right: 15px;
-  }
-
-  .navbar-default .navbar-header{
-    padding-left:  0;
-    padding-right: 0;
-  }
-
-  .navbar-default .navbar-collapse{
-    .rs ul li a i{
-      line-height: 1.5rem;
-    }
-  }
-}
-
-
-
-
-/*-----------------------------------------*/

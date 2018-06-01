@@ -15,8 +15,7 @@
 			<section id="intro">
 				<div class="container">
 					<div class="section-inner-content row">
-						<!-- Carousel
-						================================================== -->
+						<!-- Carousel -->
 						<div id="carousel-intro" class="carousel slide" data-ride="carousel">
 							<?php
 								$propertySlider = new WP_Query(array(
@@ -53,16 +52,14 @@
 											<div class="carousel-caption">
 												<h2 class="slide-title"><?php the_title(); ?></h2>
 												<p class="price"><?php the_field('prix'); ?> €</p>
-												<a href="<?php the_permalink(); ?>" class="btn">more info</a>
+												<a href="<?php the_permalink(); ?>" class="btn btn-primary">more info</a>
 											</div>
 										</div>
 									</div>
 
-								<?php
-									endwhile;
-									endif;
-									wp_reset_query();
-								 ?>
+								<?php endwhile; ?>
+								<?php endif; ?>
+								<?php wp_reset_query(); ?>
 							</div>
 						</div><!-- /.carousel -->
 					</div>
@@ -134,12 +131,12 @@
 										//setup new WP_Query
 										$propertyList = new WP_Query(
 											array(
-												'posts_per_page'	=>	-1,
+												// 'posts_per_page'	=>	-1,
 												'post_type'	=>	'gallery',
 												'nopaging'  => false,
 												'posts_per_page'  => '6',
 												'orderby' => 'ID',
-												'order' => 'ASC'
+												'order' => 'DESC'
 											)
 										);
 
@@ -148,9 +145,18 @@
 									?>
 
 									<div class="element col-xs-12 col-sm-4">
-										 <a href="<?php the_permalink(); ?>">
-											 <?php the_post_thumbnail('album-grid'); ?>
-										</a>
+										<?php $image = get_field('image'); if (!empty($image)): ?>
+											<a class="thumbs" href="<?php the_permalink(); ?>">
+												<img src="<?php echo $image['url']; ?>" class="attachment-album-grid size-album-grid wp-post-image" width="450" height="297">
+											</a>
+										<?php endif; ?>
+
+										<!-- <a class="thumbs" href="<?php //the_permalink(); ?>">
+											<?php //the_post_thumbnail('album-grid'); ?>
+									   </a> -->
+
+
+
 											<a class="inverse element-title" href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
 											<p class="element-place"><?php the_field('lieu'); ?></p>
 											<h4 class="element-price"><?php the_field('prix'); ?> €</h4>
@@ -190,68 +196,65 @@
 						<header class="col-xs-12 section-header page-header">
 							<h2 class="entry-title">Our agents</h2>
 						</header><!-- .entry-header -->
-						<!-- Carousel
-                  ================================================== -->
-                  <div id="carousel-team" class="carousel slide" data-ride="carousel">
-										<?php
-											$teamSlider = new WP_Query(array(
-												'post_type' => 'team',
-												'showposts' => 10,
-												'orderby' => 'ID',
-												'order' => 'ASC'
-											));
-										?>
 
-                    <!-- Indicators -->
-                    <ol class="carousel-indicators">
-                      <?php if(have_posts()) : while ($teamSlider->have_posts()) : $teamSlider->the_post(); ?>
-                        <li <?php if($teamSlider->current_post == 0) : ?>class="active<?php endif; ?>" data-slide-to="<?php echo $teamSlider->current_post; ?>" data-target="#carousel-team"></li>
-                      <?php endwhile; endif; ?>
-                    </ol>
+						<!-- Carousel -->
+						<div id="carousel-team" class="carousel slide" data-ride="carousel">
+							<?php
+								$teamSlider = new WP_Query(array(
+									'post_type' => 'team',
+									'showposts' => 10,
+									'orderby' => 'ID',
+									'order' => 'ASC'
+								));
+							?>
 
-                    <?php rewind_posts(); ?>
+							<!-- Indicators -->
+							<ol class="carousel-indicators">
+								<?php if(have_posts()) : while ($teamSlider->have_posts()) : $teamSlider->the_post(); ?>
+									<li <?php if($teamSlider->current_post == 0) : ?>class="active<?php endif; ?>" data-slide-to="<?php echo $teamSlider->current_post; ?>" data-target="#carousel-team"></li>
+								<?php endwhile; endif; ?>
+							</ol>
 
-                    <div class="carousel-inner" role="listbox">
-                      <?php if(have_posts()) : while ($teamSlider->have_posts()) : $teamSlider->the_post(); ?>
+							<?php rewind_posts(); ?>
 
-                        <div class="item <?php if($teamSlider->current_post == 0) : ?>active<?php endif; ?>">
-                          <div class="container">
-														<div class="thumbs col-xs-12 col-sm-4">
-															<?php $image = get_field('photo_home');
-															if (!empty($image)): ?>
-									               <img class="img-responsive" src="<?php echo $image['url']; ?>">
-															<?php endif; ?>
+							<div class="carousel-inner" role="listbox">
+								<?php if(have_posts()) : while ($teamSlider->have_posts()) : $teamSlider->the_post(); ?>
+									<div class="item <?php if($teamSlider->current_post == 0) : ?>active<?php endif; ?>">
+										<div class="container">
+											<div class="thumbs col-xs-12 col-sm-4">
+												<?php $image = get_field('photo_home');
+													if (!empty($image)): ?>
+														<img class="img-responsive" src="<?php echo $image['url']; ?>">
+														<?php endif; ?>
+													</div>
+
+													<div class="carousel-caption col-xs-12 col-sm-8">
+														<div class="content-caption">
+															<header class="col-xs-12 section-header page-header">
+																<h2 class="entry-title">Our agents</h2>
+															</header><!-- .entry-header -->
+
+															<h3 class="team-name"><?php the_title(); ?></h3>
+															<p><?php the_content(); ?></p>
+															<p class="fa fa-phone phone"><?php the_field('phone'); ?></p>
+															<i class="fa fa-envelope"></i><a href="mailto:<?php the_field('mail'); ?>"><?php the_field('mail'); ?></a>
 														</div>
+													</div>
+												</div>
+											</div>
 
-														<div class="carousel-caption col-xs-12 col-sm-8">
-															<div class="content-caption">
-																<header class="col-xs-12 section-header page-header">
-																	<h2 class="entry-title">Our agents</h2>
-																</header><!-- .entry-header -->
-																	<h3 class="team-name"><?php the_title(); ?></h3>
-																	<p><?php the_content(); ?></p>
-																	<p class="fa fa-phone phone"><?php the_field('phone'); ?></p>
-																	<i class="fa fa-envelope"></i><a href="mailto:<?php the_field('mail'); ?>"><?php the_field('mail'); ?></a>
-															</div>
-														</div>
-                          </div>
-                        </div>
+										<?php endwhile; ?>
+										<?php endif; ?>
 
-                      <?php
-                        endwhile;
-                        endif;
-                       ?>
-											 <?php wp_reset_query(); ?>
+										<?php wp_reset_query(); ?>
+									</div>
+								</div><!-- /.carousel -->
+							</div>
+						</div><!-- ./container-->
+					</section>
 
-                    </div>
-                  </div><!-- /.carousel -->
-					</div>
-				</div><!-- ./container-->
-			</section>
-
-
-			<section id="more-about">
-				<div class="container">
+					<section id="more-about">
+						<div class="container">
 					<div class="section-inner-content row">
 						<?php
 							// Contrôler si ACF est actif
@@ -345,11 +348,11 @@
 			<section id="partenairs">
 				<div class="container">
 						<div class="section-inner-content row">
-							<div class="section-title col-xs-12 col-sm-3">
+							<div class="section-title col-xs-12 col-md-3">
 								<h3 class="entry-title">Our Partners</h3>
 							</div>
 
-							<div class="partenairs-list col-xs-12 col-sm-9">
+							<div class="partenairs-list col-xs-12 col-md-9">
 								<?php
 									// Contrôler si ACF est actif
 									if ( !function_exists('get_field') ) return;
@@ -363,7 +366,7 @@
 								)); ?>
 
 								<?php while ($partenairsList->have_posts()) : $partenairsList->the_post(); ?>
-										<div class="partenairs-single col-xs-12 col-sm-3">
+										<div class="partenairs-single col-xs-12 col-md-3">
 											<?php the_post_thumbnail('_rhd-featured', ['class' => 'img-responsive']); ?>
 										</div>
 								<?php endwhile; // end of the loop. ?>
@@ -372,14 +375,7 @@
 					</div>
 				</div>
 			</section>
-
-
-
-<?php wp_reset_query(); ?>
-
-
-
-
+			<?php wp_reset_query(); ?>
 
 		</main><!-- #main -->
 	</div><!-- #primary -->

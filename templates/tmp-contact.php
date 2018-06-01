@@ -39,19 +39,17 @@
 							</div>
 
 							<div class="section-content map row">
-								<?php
-									// Contrôler si ACF est actif
-									if ( !function_exists('get_field') ) return;
-								?>
+								<?php // Contrôler si ACF est actif ?>
+								<?php if ( !function_exists('get_field') ) return; ?>
 
-										<?php the_field('google_map'); ?>
+								<?php the_field('google_map'); ?>
 								<?php wp_reset_query(); ?>
 							</div>
 						</article><!-- #post-## -->
 
 						<?php endwhile; // end of the loop. ?>
 						<?php wp_reset_query(); ?>
-					</div>
+				</div>
 			</section>
 
 
@@ -66,10 +64,8 @@
 						<div class="section-content">
 							<?php the_content(); ?>
 
-							<?php
-								// Contrôler si ACF est actif
-								if ( !function_exists('get_field') ) return;
-							?>
+							<?php // Contrôler si ACF est actif ?>
+							<?php if ( !function_exists('get_field') ) return; ?>
 
 							<div class="adresse">
 								<h4><?php the_field('adresse'); ?></h4>
@@ -94,14 +90,8 @@
 						<div class="section-content">
 							<?php the_field('formulaire'); ?>
 						</div>
-
 				</div>
 			</section>
-
-
-
-
-
 		</main><!-- #main -->
 	</div><!-- #primary -->
 
